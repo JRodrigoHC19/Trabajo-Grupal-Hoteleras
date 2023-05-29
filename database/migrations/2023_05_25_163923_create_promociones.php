@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('promocion');
             $table->string('duracion');
             $table->integer('celular');
-            $table->integer('id_hotel');
+            $table->unsignedBigInteger('id_hotel');
+            $table->foreign('id_hotel')->references('id')->on('hoteles');
         });
     }
 
